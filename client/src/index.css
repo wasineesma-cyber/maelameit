@@ -145,7 +145,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Sarabun", "Noto Sans Thai", sans-serif;
+    font-family: "Inter", "Sarabun", "Noto Sans Thai", sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: "Outfit", sans-serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

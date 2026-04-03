@@ -142,7 +142,7 @@ export default function Dashboard() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center space-y-3">
-          <img src={LOGO_URL} alt="Mae Lamiet" className="w-16 h-16 rounded-2xl object-cover mx-auto shadow-lg" />
+          <div className="text-2xl font-bold tracking-tighter text-foreground">แม่ละเมียด</div>
           <div className="text-muted-foreground text-sm animate-pulse">กำลังโหลด...</div>
         </div>
       </div>
@@ -168,9 +168,10 @@ export default function Dashboard() {
         <div className="bg-white border-b sticky top-0 z-10">
           <div className="container flex items-center justify-between h-14 max-w-2xl mx-auto">
             <div className="flex items-center gap-2.5">
-              <img src={LOGO_URL} alt="Mae Lamiet" className="w-8 h-8 rounded-xl object-cover" />
-              <span className="font-semibold text-foreground">แม่ละเมียด</span>
-              <Badge variant="secondary" className="text-xs">Local</Badge>
+            <div className="flex items-center gap-2">
+              <span className="font-bold tracking-tighter text-lg text-foreground">แม่ละเมียด</span>
+              <Badge variant="secondary" className="text-[10px] h-4 px-1.5 font-medium bg-neutral-100 text-neutral-500 border-none">LOCAL</Badge>
+            </div>
             </div>
             <Button
               size="sm"
@@ -310,9 +311,8 @@ export default function Dashboard() {
       <div className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container flex items-center justify-between h-14 max-w-2xl mx-auto">
           <div className="flex items-center gap-2.5">
-            <img src={LOGO_URL} alt="Mae Lamiet" className="w-8 h-8 rounded-xl object-cover" />
-            <span className="font-bold text-foreground">แม่ละเมียด</span>
-            {isPro && <Badge className="bg-amber-100 text-amber-700 border-amber-200 text-xs">⭐ Pro</Badge>}
+            <span className="font-bold tracking-tighter text-lg text-foreground">แม่ละเมียด</span>
+            {isPro && <Badge className="bg-amber-100 text-amber-700 border-amber-200 text-[10px] h-4 px-1.5 font-bold uppercase tracking-wider">PRO</Badge>}
           </div>
           <div className="flex items-center gap-2">
             {isAuthenticated && !isDemo && (
