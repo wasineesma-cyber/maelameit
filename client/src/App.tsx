@@ -4,11 +4,13 @@ import { Layout } from "@/components/Layout";
 import { AddTransactionModal } from "@/components/AddTransactionModal";
 import { Dashboard } from "@/pages/Dashboard";
 import { Transactions } from "@/pages/Transactions";
+import { Analytics } from "@/pages/Analytics";
+import { Settings } from "@/pages/Settings";
 import { useTransactions } from "@/hooks/useTransactions";
 
 export function App() {
   const [showAdd, setShowAdd] = useState(false);
-  const { transactions, addTransaction, deleteTransaction } = useTransactions();
+  const { transactions, addTransaction, deleteTransaction, clearAll } = useTransactions();
 
   return (
     <Router>
@@ -24,6 +26,15 @@ export function App() {
             <Transactions
               transactions={transactions}
               onDelete={deleteTransaction}
+            />
+          )} />
+          <Route path="/analytics" component={() => (
+            <Analytics transactions={transactions} />
+          )} />
+          <Route path="/settings" component={() => (
+            <Settings
+              transactions={transactions}
+              onClearAll={clearAll}
             />
           )} />
           <Route>

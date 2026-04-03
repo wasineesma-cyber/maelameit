@@ -4,6 +4,7 @@ import {
   loadTransactions,
   persistTransaction,
   removeTransaction,
+  clearAllTransactions,
 } from "@/lib/storage";
 import { nanoid } from "@/lib/utils";
 
@@ -30,5 +31,10 @@ export function useTransactions() {
     setTransactions(loadTransactions());
   }, []);
 
-  return { transactions, addTransaction, deleteTransaction };
+  const clearAll = useCallback(() => {
+    clearAllTransactions();
+    setTransactions([]);
+  }, []);
+
+  return { transactions, addTransaction, deleteTransaction, clearAll };
 }

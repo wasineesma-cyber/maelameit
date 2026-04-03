@@ -20,3 +20,7 @@ export function removeTransaction(id: string): void {
   const all = loadTransactions().filter((t) => t.id !== id);
   localStorage.setItem(KEY, JSON.stringify(all));
 }
+
+export function clearAllTransactions(): void {
+  localStorage.setItem(KEY, JSON.stringify([]));
+}
