@@ -1,0 +1,18 @@
+{
+  "query": "SELECT id, name, email, openId, plan, subscriptionStatus FROM users LIMIT 20;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3aNBKaufPAu44nm.root --database oKpYsJiu26CapzFcKkAmom --execute SELECT id, name, email, openId, plan, subscriptionStatus FROM users LIMIT 20;",
+  "rows": [
+    {
+      "id": "60014",
+      "name": "วศินี ศมาวรรตกุล",
+      "email": "wasinee.sma@gmail.com",
+      "openId": "7QxjzmJ8Pc8aS5QPj62mgz",
+      "plan": "free",
+      "subscriptionStatus": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\temail\topenId\tplan\tsubscriptionStatus\n60014\tวศินี ศมาวรรตกุล\twasinee.sma@gmail.com\t7QxjzmJ8Pc8aS5QPj62mgz\tfree\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 1558
+}

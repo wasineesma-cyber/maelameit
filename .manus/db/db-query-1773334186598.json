@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE users SET plan = 'pro', subscriptionStatus = 'active' WHERE id > 0;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3aNBKaufPAu44nm.root --database oKpYsJiu26CapzFcKkAmom --execute UPDATE users SET plan = 'pro', subscriptionStatus = 'active' WHERE id > 0;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1487
+}
